@@ -1,7 +1,7 @@
 # sl-skill
 
 自用 & 供大家娱乐的 [Claude Code / Agent Skill](https://agentskills.io)。
-**一个 `fun-pack` 装下全部娱乐玩法——装一遍就够。**
+**一个 `sl-fun-pack` 装下全部娱乐玩法——装一遍就够。**
 
 > ⚠️ 含一块 **18+ 成人向**内容（`开个车`），仅在你主动触发时才出现。介意请勿安装。
 
@@ -25,7 +25,7 @@
 
 ```bash
 git clone https://github.com/SymbolLong/sl-skill.git
-cp -r sl-skill/skills/fun-pack ~/.claude/skills/
+cp -r sl-skill/skills/sl-fun-pack ~/.claude/skills/
 ```
 
 重启 / 新开对话即可。想用哪块就说对应触发语；全程**用户不触发就绝不主动**。

@@ -1,9 +1,9 @@
 ---
-name: fun-pack
-description: "娱乐大礼包 — one skill for all the fun. (A) 持续·加一句点缀模式:激励/丧/废话/台词/歌词/诗词/古文/押韵,开关式可叠加(开启X模式/关闭X);(B) 持续·变语气:角色扮演、方言,整段用该口吻(开启角色X/开启方言X);(C) 点播:讲个笑话、来句土味情话、来个冷知识;(D) 🔞18+ 成人双关叙事点播(开个车);(E) 忙碌模式:终端滚动一场 Haiku 生成的技术研讨对话、撑满目标时长(sleep 控时、省 token),结束输出研讨纪要到当前目录;支持续演加时(开启忙碌模式 <话题> <目标时长> / 续演 <时长>). Use when the user turns any vibe/voice mode on/off, point-plays a joke / pickup line / trivia / 开个车, or starts 忙碌/busy mode. Persistent parts add a line or change the whole voice each reply until off; point-play parts deliver one piece on demand, isolated, never proactive."
+name: sl-fun-pack
+description: "娱乐大礼包 (sl-fun-pack) — one skill for all the fun. (A) 持续·加一句点缀模式:激励/丧/废话/台词/歌词/诗词/古文/押韵,开关式可叠加(开启X模式/关闭X);(B) 持续·变语气:角色扮演、方言,整段用该口吻(开启角色X/开启方言X);(C) 点播:讲个笑话、来句土味情话、来个冷知识;(D) 🔞18+ 成人双关叙事点播(开个车);(E) 忙碌模式:终端滚动一场 Haiku 生成的技术研讨对话、撑满目标时长(sleep 控时、省 token),结束输出研讨纪要到当前目录;支持续演加时(开启忙碌模式 <话题> <目标时长> / 续演 <时长>). Use when the user turns any vibe/voice mode on/off, point-plays a joke / pickup line / trivia / 开个车, or starts 忙碌/busy mode. Persistent parts add a line or change the whole voice each reply until off; point-play parts deliver one piece on demand, isolated, never proactive."
 ---
 
-# 🎉 娱乐大礼包 (Fun Pack)
+# 🎉 娱乐大礼包 (sl-fun-pack)
 
 一个 skill 装下全部玩法。四大块：
 
