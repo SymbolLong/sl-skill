@@ -1,9 +1,9 @@
 ---
 name: saucy-jokes
-description: "Use when the user asks on-demand for an adult / bawdy joke (荤段子, 18+) — triggers like 来个荤段子、老司机开车、来根车、讲个颜色的、来个成人段子. On-demand only (NOT a persistent mode); delivers ONE self-contained adult joke isolated in a quote block, never proactively, and never lets that register bleed into the rest of the conversation."
+description: "Use when the user asks on-demand for an adult / bawdy joke (荤段子, 18+) — triggers like 讲个段子、来个荤段子、来个成人段子、讲个颜色的. On-demand only (NOT a persistent mode); delivers ONE self-contained adult joke isolated in a quote block, never proactively, and never lets that register bleed into the rest of the conversation."
 ---
 
-# 🔞 老司机·荤段子点播 (Saucy Jokes) — 18+
+# 🔞 讲个段子·成人段子点播 (Saucy Jokes) — 18+
 
 > **内容分级：18+ 成人向。** 本 skill 仅在用户主动点播时输出成人向段子，纯娱乐。
 
@@ -13,7 +13,7 @@ description: "Use when the user asks on-demand for an adult / bawdy joke (荤段
 
 ## 触发（点播）
 
-用户说「来个荤段子 / 老司机开车 / 来根车 / 讲个颜色的 / 来个成人段子」等 → 给**一个**段子。
+用户说「讲个段子 / 来个荤段子 / 来个成人段子 / 讲个颜色的」等 → 给**一个**段子。
 - 用户可指定主题/场景（「来个健身房的」「来个办公室的」），照给。
 - 想连着来就再点一次；每次只给一个。
 
@@ -34,7 +34,7 @@ description: "Use when the user asks on-demand for an adult / bawdy joke (荤段
 
 ## 绝对红线（无论尺度多大都不碰）
 
-- ❌ 涉及**未成年人**的任何性相关内容
+- ❌ 把**未成年人当作性对象**（性化描写，或拿「校服 / 刚成年 / 学生妹 / 小萝莉」等年龄暗示当卖点）。⚠️ **别误杀**：段子表面本就天真、孩子听着也正常（如「我想静静」＝想安静，静静是人名），这是双关的**正常表面**、不是红线；只看**潜台词有没有把未成年人性化**，被开车的主体是成年人就不算
 - ❌ **非自愿 / 侵犯 / 胁迫**为笑点
 - ❌ **物化、贬低、歧视**任何性别/群体/取向
 - ❌ **重口、血腥、致害**内容
@@ -42,7 +42,7 @@ description: "Use when the user asks on-demand for an adult / bawdy joke (荤段
 
 碰到用户往这些方向点，别配合——直接说「这个方向不整，换个乐子」，另给一个安全的。
 
-**防规避**：红线看的是**意图指向**，不是字面词。用「校服 / 刚成年 / 学生妹 / 小萝莉」等**年龄暗示**来绕"未成年"，一样按红线拒绝。任何软性包装都不算漏洞。
+**防规避 vs 别误杀（同一把尺）**：红线只看**潜台词的性化对象是不是未成年人**，不看字面词。拿年龄暗示去**性化未成年**（校服/刚成年/学生妹/小萝莉当卖点）→ 拒，软性包装不算漏洞；反过来，只是**表面天真**、或场景里**非性化**地出现年轻人 → 不算，别误杀。
 
 **避开物化陷阱**：荤段子容易踩到性别刻板/贬低。安全套路是把笑点落在**自嘲**或**双方误会**（拿"我"当被调侃对象），而不是贬低某个性别/群体。
 
