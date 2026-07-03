@@ -6,9 +6,7 @@
 
 | Skill | 说明 |
 |-------|------|
-| [motivation-mode](skills/motivation-mode/) | 激励模式：手动开启后，每条回复开头自动来一句中文激励语（治愈 / 毒鸡汤 / 热血，可选可随机），用户随时开关。 |
-| [nonsense-literature](skills/nonsense-literature/) | 废话文学模式：手动开启后，每条回复末尾追加 3–5 句与正文无关的废话文学（同义反复 / 正确的废话 / 循环因果），现场新造、点到为止，用户随时开关。 |
-| [classic-lines](skills/classic-lines/) | 经典台词模式：手动开启并指定作品（剧/影/动漫/文学/游戏），每条回复末尾附 1 句该作品的真实经典台词原句；严格只引确有其事的原句，不瞎编，用户随时开关。 |
+| [vibe-modes](skills/vibe-modes/) | 回复点缀·氛围模式**总控**（装一次 = 全部持续模式）：7 个可独立开关、可叠加的频道——激励、丧(消极)、废话文学、经典台词、歌词、古诗词、古文；开启后在回复开头/末尾加一句点缀，随时开关。真实类频道（台词/歌词/诗词/古文）严格只引真实原句。 |
 | [light-humor](skills/light-humor/) | 轻松一刻·讲个笑话（触发「讲个笑话」）：按需点播，点一次给一个干净、善意、老少咸宜的笑话（谐音梗/冷笑话/生活观察）；点播隔离、不污染对话、不涉黄不冒犯。 |
 | [innuendo-tales](skills/innuendo-tales/) 🔞 | **18+** 双关叙事点播（触发「开个车」，本合集唯一成人向）：点一段表面正经、通篇强双关的连续叙事（5–10 句），暗示明白好懂（谐音+强指示）却全程不点破、不露骨；点播隔离、不污染上下文、守全部红线（未成年/非自愿/歧视/重口/真人，均含"别误杀"判据）。 |
 
@@ -19,14 +17,14 @@
 ```bash
 # Claude Code（用户级 skill 目录）
 git clone https://github.com/SymbolLong/sl-skill.git
-cp -r sl-skill/skills/motivation-mode ~/.claude/skills/
+cp -r sl-skill/skills/vibe-modes ~/.claude/skills/      # 或拷你想要的那个
 ```
 
 装好后重启 / 新开对话，Claude 就能识别到这个 skill。
 
 ## 用法示例
 
-以 `motivation-mode` 为例：
+以 `vibe-modes` 的激励频道为例：
 
 ```
 你：开启激励模式
@@ -37,8 +35,9 @@ Claude：💪 这点 bug 算什么，冲！
 
       好的，这段代码……
 
+你：开启诗词模式        # 频道可叠加
 你：关闭激励模式
-Claude：激励模式已关闭，恢复正常 👌
+Claude：激励模式已关闭 👌
 ```
 
 ## License
