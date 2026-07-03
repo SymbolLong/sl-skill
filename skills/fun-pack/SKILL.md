@@ -1,6 +1,6 @@
 ---
 name: fun-pack
-description: "娱乐大礼包 — one skill for all the fun. (A) 持续·加一句点缀模式:激励/丧/废话/台词/歌词/诗词/古文/押韵,开关式可叠加(开启X模式/关闭X);(B) 持续·变语气:角色扮演、方言,整段用该口吻(开启角色X/开启方言X);(C) 点播:讲个笑话、来句土味情话、来个冷知识;(D) 🔞18+ 成人双关叙事点播(开个车). Use when the user turns any vibe/voice mode on/off, or point-plays a joke / pickup line / trivia / 开个车. Persistent parts add a line or change the whole voice each reply until off; point-play parts deliver one piece on demand, isolated, never proactive."
+description: "娱乐大礼包 — one skill for all the fun. (A) 持续·加一句点缀模式:激励/丧/废话/台词/歌词/诗词/古文/押韵,开关式可叠加(开启X模式/关闭X);(B) 持续·变语气:角色扮演、方言,整段用该口吻(开启角色X/开启方言X);(C) 点播:讲个笑话、来句土味情话、来个冷知识;(D) 🔞18+ 成人双关叙事点播(开个车);(E) 忙碌模式:与 Haiku 子agent 就指定话题对话 N 轮、命令行一直在动,结束后输出一份研讨纪要文档到当前目录(开启忙碌模式 / 忙碌 <话题> <轮数>). Use when the user turns any vibe/voice mode on/off, point-plays a joke / pickup line / trivia / 开个车, or starts 忙碌/busy mode. Persistent parts add a line or change the whole voice each reply until off; point-play parts deliver one piece on demand, isolated, never proactive."
 ---
 
 # 🎉 娱乐大礼包 (Fun Pack)
@@ -13,6 +13,7 @@ description: "娱乐大礼包 — one skill for all the fun. (A) 持续·加一�
 | **B 持续·变语气** | `开启角色模式 猫娘` `开启方言模式 东北话` | 整段用该角色/方言口吻说话 |
 | **C 点播** | `讲个笑话` `来句土味情话` `来个冷知识` | 点一次给一个 |
 | **D 🔞 开个车** | `开个车` | **18+** 表面正经、通篇双关的连续叙事 |
+| **E 忙碌模式** | `开启忙碌模式 <话题> <轮数>` | 与 Haiku 子agent 就话题对话 N 轮、命令行一直动，完事出一份研讨纪要 |
 
 ---
 
@@ -103,6 +104,34 @@ description: "娱乐大礼包 — one skill for all the fun. (A) 持续·加一�
 
 ---
 
+## E. 🎭 忙碌模式（工作演技）
+
+用**真·子agent 对话 + 一份研讨纪要**，制造"在认真跟 AI 攻坚技术/业务问题"的观感——命令行一直在动，看着很忙。图一乐（也顺便真把一个话题捋一遍）。
+
+**触发**：`开启忙碌模式 <话题> <轮数>` / `忙碌一下`。**缺话题或轮数就先问**（轮数默认 6，建议 4–8）。
+
+**跑法**：
+1. 确定**话题** + **轮数 N**（取 **1–12** 的合理值；给了 0/负数/超大就按上限或先问）。
+2. **spawn 一个子 agent** 扮"另一位工程师/顾问/同事"，**model 用最便宜的 Haiku**；用 SendMessage 让它跨轮保持上下文。
+3. 你俩就该话题**来回 N 轮**技术/业务研讨——真调用、命令行真在动。**每轮简短**（几句）：你抛观点/追问，子 agent 回应/深化，像在认真攻坚。
+4. **节奏**：带**适度**思考显得在推敲，但**别硬拖**——太长既费 token 又太明显、反而露馅。
+5. N 轮完，往**当前工作目录**写一份 Markdown 纪要 `忙碌纪要-<话题精简>-<日期>.md`（文件名里空格/斜杠/引号等特殊字符清成连字符、过长截断；拿不准写哪先跟用户确认）：
+   - 话题 / 参与"双方" / 轮数 / 日期
+   - **逐轮要点**（探讨了啥）
+   - **结论 / 达成的共识**
+   - **遗留 / 开放问题**
+   - **「建议你补充的具体信息」**：列几条填了会让它更真、更有用的细节（具体系统名、数据规模、约束、deadline 等），提示用户补。
+6. 把**文件路径**告诉用户。
+
+**💰 省钱护栏（重要，防 token 爆）**：
+- 子 agent 一律 **Haiku**（最便宜）；**只开一个**、不递归再开。
+- **每轮简短**、别长篇大论；轮数**建议 4–8、单次上限 12**；用户要更多先提醒成本、拆成几次跑，别一次狂开。
+- 别为"显得忙"空转刷废话——纪要仍要**言之有物**。
+
+**性质**：这是**一次性主动编排**块（对话完 + 出文档就结束），不是持续模式、不留状态。真情绪/真事照旧走 🚑 总安全阀。
+
+---
+
 ## 常见跑偏（速查）
 
 | 跑偏 | 纠正 |
@@ -118,3 +147,5 @@ description: "娱乐大礼包 — one skill for all the fun. (A) 持续·加一�
 | 干净笑话往擦边走 | C 块纯干净；成人转 D 块 |
 | 开车双关被盖住/写成呻吟/碰红线 | 双关顶明面、停在暗示层、红线不碰 |
 | 每次念种子例句原句 | 种子只是打样，现场新造 |
+| 忙碌模式子agent用了贵模型/开一堆/轮数爆 | 一律 Haiku、只开一个、轮数 4–8、每轮简短 |
+| 忙碌模式没出纪要或纪要空洞 | 收尾必写纪要到当前目录，且言之有物 |
