@@ -7,6 +7,7 @@
 | Skill | 说明 |
 |-------|------|
 | [motivation-mode](skills/motivation-mode/) | 激励模式：手动开启后，每条回复开头自动来一句中文激励语（治愈 / 毒鸡汤 / 热血，可选可随机），用户随时开关。 |
+| [nonsense-literature](skills/nonsense-literature/) | 废话文学模式：手动开启后，每条回复末尾追加 3–5 句与正文无关的废话文学（同义反复 / 正确的废话 / 循环因果），现场新造、点到为止，用户随时开关。 |
 
 ## 安装
 
